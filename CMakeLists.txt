@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 project(ros_unity_interfaces)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
+    add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
 # find dependencies
@@ -10,8 +10,10 @@ find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Pos.msg"
-  "msg/Colordtt.msg"
+    "msg/Pos.msg"
+    "msg/Colordtt.msg"
+    "msg/Rot.msg"
+    "srv/SetModelConfiguration.srv"
 )
 #DEPENDENCIES geometry_msgs when you use existing msg packages!
 
